@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios"; // using axios to work with APIs
 
 // Layout HOC
 import DefaultLayoutHoc from "../layout/Default.layout";
@@ -13,6 +14,17 @@ const HomePage = () => {
   const [premierMovies, setPremierMovies] = useState([]);
   const [onlineStreamEvents, setOnlineStreamEvents] = useState([]);
 
+  // get.apiName('/', async ()=>{}) this was used previously now instead we use below one for react
+  useEffect(() => {
+    const requestTopRatedMovies = async () => {
+      const getTopRatedMovies = await axios.get(
+        "https://api.themoviedb.org/3/movie/top_rated?api_key=1fbbc8dfc72ba5f5ac7ee7f22cd4f89f"
+      );
+      setRecommendedMovies(getTopRatedMovies.data.results);
+    };
+    requestTopRatedMovies();
+  }, []);
+
   return (
     <>
       <HeroCarousel />
@@ -24,7 +36,7 @@ const HomePage = () => {
         <EntertainmentCard />
       </div>
 
-      <div className="container mx-auto px-4 md:px-12 my-8">
+      <div className="container mx-auto px-4 md:px-12 my-8 ">
         <PosterSlider
           title="Recommended Movies"
           subtitle="List of recommended movies"

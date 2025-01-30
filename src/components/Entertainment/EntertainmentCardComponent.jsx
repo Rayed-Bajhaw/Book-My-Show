@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import "./arrow.css";
 
 const EntertainmentCard = (props) => {
   return (
@@ -32,10 +33,11 @@ const EntertainmentCardSlider = () => {
   ];
 
   const settings = {
-    infinite: false,
+    infinite: true,
     slidesToShow: 5,
     slidesToScroll: 4,
     initialSlide: 0,
+
     responsive: [
       {
         breakpoint: 1024,
@@ -66,8 +68,8 @@ const EntertainmentCardSlider = () => {
   return (
     <>
       <Slider {...settings}>
-        {EntertainmentImage.map((image) => (
-          <EntertainmentCard src={image} />
+        {EntertainmentImage.map((image, index) => (
+          <EntertainmentCard src={image} key={index} />
         ))}
       </Slider>
     </>
