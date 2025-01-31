@@ -15,14 +15,32 @@ const HomePage = () => {
   const [onlineStreamEvents, setOnlineStreamEvents] = useState([]);
 
   // get.apiName('/', async ()=>{}) this was used previously now instead we use below one for react
+
   useEffect(() => {
     const requestTopRatedMovies = async () => {
-      const getTopRatedMovies = await axios.get(
-        "https://api.themoviedb.org/3/movie/top_rated?api_key=1fbbc8dfc72ba5f5ac7ee7f22cd4f89f"
-      );
+      const getTopRatedMovies = await axios.get("/movie/top_rated");
       setRecommendedMovies(getTopRatedMovies.data.results);
     };
     requestTopRatedMovies();
+  }, []);
+
+  useEffect(() => {
+    const requestPopularMovies = async () => {
+      const getPopularMovies = await axios.get("/movie/popular");
+      setPremierMovies(getPopularMovies.data.results);
+    };
+    requestPopularMovies();
+  }, []);
+
+  useEffect(() => {
+    const requestUpcomingMovies = async () => {
+      const getUpcomingMovies = await axios.get(
+        "/movie/upcoming"
+        // before using axios in app.js "https://api.themoviedb.org/3/movie/upcoming?api_key=1fbbc8dfc72ba5f5ac7ee7f22cd4f89f"
+      );
+      setOnlineStreamEvents(getUpcomingMovies.data.results);
+    };
+    requestUpcomingMovies();
   }, []);
 
   return (
@@ -46,7 +64,7 @@ const HomePage = () => {
       </div>
 
       <div className="bg-premier-800 py-12">
-        <div className="container mx-auto px-4 md:px-12 my-8 flex fles-col gap-3">
+        <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
           <div className="hidden md:flex">
             <img src="" alt="Rupay" className="w-full h-full" />
           </div>
@@ -58,6 +76,7 @@ const HomePage = () => {
           />
         </div>
       </div>
+
       <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
         <PosterSlider
           title="Online Streaming Events"
