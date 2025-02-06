@@ -1,5 +1,6 @@
 import React from "react";
-import { BiChevronDown, BiSearch } from "react-icons/bi";
+import { BiChevronDown, BiSearch, BiMenu } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 function NavSm() {
   return (
@@ -42,8 +43,12 @@ function NavLg() {
     <>
       <div className="container flex mx-auto px-4 items-center justify-between">
         <div className="flex items-center w-1/2 gap-3">
-          <div className="w-10 h-10">
-            <img src="" alt="logo" className="w-full h-full" />
+          <div className="w-30 h-10">
+            <img
+              src="https://mockfly.dev/companyLogos/bookmyshow.png"
+              alt="logo"
+              className="w-full h-full"
+            />
           </div>
           <div className="w-full flex items-center gap-3 bg-white px-3 py-1 rounded-md">
             <BiSearch />
@@ -52,6 +57,24 @@ function NavLg() {
               className="w-full bg-transparent border-none focus:outline-none"
               placeholder="Search for movies, events, plays, sports and activities"
             />
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <Link to={`/`}>
+            <span className="text-gray-200 text-base flex items-center cursor-pointer hover:text-white">
+              Hospet <BiChevronDown />
+            </span>
+          </Link>
+          <Link to={`/plays`}>
+            <span className="text-gray-200 text-base flex items-center cursor-pointer hover:text-white">
+              Plays
+            </span>
+          </Link>
+          <button className="bg-red-600 text-white px-2 py-1 text-sm rounded">
+            Sign In
+          </button>
+          <div className="w-8 h-8 text-white">
+            <BiMenu className="w-full h-full" />
           </div>
         </div>
       </div>

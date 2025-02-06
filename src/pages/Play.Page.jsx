@@ -15,7 +15,7 @@ const PlayPage = () => {
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex items-center">
               <Poster
                 isPlay={true}
-                src=""
+                src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-me-vs-me-0-2025-1-10-t-16-17-58.jpg"
                 title="So Rude of Me By Sweets"
                 subtitle="Comedy Shows | English, Kannada | 18yrs+ | 2hr 30mins"
               />
@@ -23,7 +23,7 @@ const PlayPage = () => {
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex items-center">
               <Poster
                 isPlay={true}
-                src=""
+                src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-72-east-productions-siachen-0-2024-1-25-t-4-34-48.jpg"
                 title="So Rude of Me By Sweets"
                 subtitle="Comedy Shows | English, Kannada | 18yrs+ | 2hr 30mins"
               />
@@ -31,7 +31,7 @@ const PlayPage = () => {
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex items-center">
               <Poster
                 isPlay={true}
-                src=""
+                src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-the-great-indian-circus-0-2025-1-14-t-4-18-40.jpg"
                 title="So Rude of Me By Sweets"
                 subtitle="Comedy Shows | English, Kannada | 18yrs+ | 2hr 30mins"
               />
@@ -39,7 +39,7 @@ const PlayPage = () => {
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex items-center">
               <Poster
                 isPlay={true}
-                src=""
+                src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-movie-under-the-stars-0-2025-1-28-t-10-19-38.jpg"
                 title="So Rude of Me By Sweets"
                 subtitle="Comedy Shows | English, Kannada | 18yrs+ | 2hr 30mins"
               />
@@ -47,7 +47,7 @@ const PlayPage = () => {
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex items-center">
               <Poster
                 isPlay={true}
-                src=""
+                src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-mushaira-night-0-2025-1-7-t-9-2-51.jpg"
                 title="So Rude of Me By Sweets"
                 subtitle="Comedy Shows | English, Kannada | 18yrs+ | 2hr 30mins"
               />
@@ -55,7 +55,7 @@ const PlayPage = () => {
             <div className="w-1/2 md:w-1/3 lg:w-3/12 my-3 flex items-center">
               <Poster
                 isPlay={true}
-                src=""
+                src="https://assets-in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-aur-karo-theatre-0-2025-1-27-t-8-1-25.jpg"
                 title="So Rude of Me By Sweets"
                 subtitle="Comedy Shows | English, Kannada | 18yrs+ | 2hr 30mins"
               />

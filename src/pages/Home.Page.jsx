@@ -65,8 +65,12 @@ const HomePage = () => {
 
       <div className="bg-premier-800 py-12">
         <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
-          <div className="hidden md:flex">
-            <img src="" alt="Rupay" className="w-full h-full" />
+          <div className="hidden md:flex ">
+            <img
+              src="https://dw8hn2nzcjgu6.cloudfront.net/wp-content/uploads/2021/04/Rupay-Logo.png"
+              alt="Rupay"
+              className="w-50 h-20"
+            />
           </div>
           <PosterSlider
             title="Premiers"

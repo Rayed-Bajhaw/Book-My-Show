@@ -1,4 +1,8 @@
-import { Disclosure } from "@headlessui/react";
+import {
+  DisclosureButton,
+  DisclosurePanel,
+  Disclosure,
+} from "@headlessui/react";
 import React from "react";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 
@@ -7,13 +11,13 @@ const PlayFilters = (props) => {
     <Disclosure>
       {({ open }) => (
         <>
-          <Disclosure.Button className="py-2 flex items-center gap-3">
+          <DisclosureButton className="py-2 flex items-center gap-3">
             {open ? <BiChevronUp /> : <BiChevronDown />}
             <span className={open ? "text-red-600" : "text-gray-700"}>
               {props.title}
             </span>
-          </Disclosure.Button>
-          <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
+          </DisclosureButton>
+          <DisclosurePanel className="px-4 pt-4 pb-2 text-sm text-gray-500">
             <div className="flex items-center gap-3 flex-wrap">
               {props.tags.map((tag, index) => (
                 <div
@@ -24,7 +28,7 @@ const PlayFilters = (props) => {
                 </div>
               ))}
             </div>
-          </Disclosure.Panel>
+          </DisclosurePanel>
         </>
       )}
     </Disclosure>
